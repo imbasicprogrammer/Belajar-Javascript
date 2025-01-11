@@ -1,38 +1,22 @@
-//comment
-console.log("external file");
+//tipe data javascript
 
-//1. LET
-//variabel di javascript dengan let
-let nama = "monkey d luffy";
+//1 untuk mencari tahu tipe data suatu variabel
+let dataString = "ucup"; //string
+console.log(dataString);
+console.log(typeof dataString);
 
-//menampilkan output
-console.log(nama);
+let dataNumber = 13.4; //number = 1, 0, -1, 1.2, -1.2
+console.log(dataNumber);
+console.log(typeof dataNumber);
 
-//mengubah isi variabel
-nama = "monkey d dragon";
-console.log(nama);
+let dataBoolean = true; //boolean
+console.log(dataBoolean);
+console.log(typeof dataBoolean);
 
-//kelakuan dari let
-let namaDepan = "monkey";
-{
-  let namaDepan = "garp"; //hanya mengubah nilai yg ada dalam kurung kurawal
-  console.log(namaDepan);
-}
-console.log(namaDepan);
+let dataKosong; //undefined atau data kosong
+console.log(dataKosong);
+console.log(typeof dataKosong);
 
-//2. VAR
-//kelakuan dari var
-var namaB = "sanji";
-{
-  var namaB = "vinsmoke"; //ikut mengubah nilai diluar kurung kurawal
-  console.log(namaB);
-}
-console.log(namaB); //mengambil data terbaru
-
-//default tanpa keyword adalah var
-makanan = "daging";
-console.log(makanan); //ini di identifikasi sebagai  var
-
-//3. CONST
-const TTL = "16 agustus 2006"; // nilai variabel konstan dan tak dapat di ubah
-console.log(TTL);
+dataKosong = 2;
+console.log(dataKosong);
+console.log(typeof dataKosong);
