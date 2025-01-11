@@ -1,22 +1,26 @@
-//tipe data javascript
+//Belajar String
 
-//1 untuk mencari tahu tipe data suatu variabel
-let dataString = "ucup"; //string
+let dataString = "ini adalah string";
 console.log(dataString);
-console.log(typeof dataString);
 
-let dataNumber = 13.4; //number = 1, 0, -1, 1.2, -1.2
-console.log(dataNumber);
-console.log(typeof dataNumber);
+//1 Escaping String ( \' \" \n \t \\ \r \b \f")
+let data1 = "kaizokuni 'ore no naru'";
+console.log(data1);
+let data2 = "kimi no namewa \"udin'"; //  escaping karakternya adalah \"
+console.log(data2);
+let data3 = "halo dunia, nama saya\t habib"; //escaping tab
+console.log(data3);
+let data4 = "halo dunia, nama saya \nhabib"; //escaping enter
+console.log(data4);
 
-let dataBoolean = true; //boolean
-console.log(dataBoolean);
-console.log(typeof dataBoolean);
+//2 Literal String (template literal string)
+let namaDepan = "Monkey";
+let namaTengah = "D";
+let namaBelakang = "Luffy";
+let umur = 20;
+console.log(namaDepan + " " + namaTengah + " " + namaBelakang + " " + umur);
+//yg diatas tidak efisien karena mengubah umur menjadi string
 
-let dataKosong; //undefined atau data kosong
-console.log(dataKosong);
-console.log(typeof dataKosong);
-
-dataKosong = 2;
-console.log(dataKosong);
-console.log(typeof dataKosong);
+//cara yang efisien dan efektif adalah sbb
+let biodata = `${namaDepan} ${namaTengah} ${namaBelakang} berumur ${umur} tahun`;
+console.log(biodata);
