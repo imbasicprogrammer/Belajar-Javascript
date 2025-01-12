@@ -1,28 +1,28 @@
-//Belajar Tipe data Number (float, integer)
-//bigInt -> rentang nilai di atas number
+//Belajar tipe data Boolean
 
-//contoh
-let angka = 10; //integer
-console.log(angka);
-console.log(typeof angka);
+let dataBool = true; //true = 1
+console.log(dataBool);
 
-angka = 10.5; //float
-console.log(angka);
-console.log(typeof angka);
+dataBool = false; //false = 0
+console.log(dataBool);
 
-angka = 123456789123456789912345n; //bigInt
-console.log(angka);
-console.log(typeof angka);
+//boolean bisa juga di definisikan dengan ->  <,>,==
+let data_bool = 3 < 9;
+console.log(`3 < 9 = ${data_bool}`);
 
-//cara menggunakan tipe data number
-let nomor = 10.2;
-let nomorInt = parseInt(nomor); //parseInt mengubah float menjadi integer
-console.log(nomorInt);
+data_bool = 3 > 9;
+console.log(`3 > 9 = ${data_bool}`);
 
-nomor = 10.2;
-let nomorFloat = parseFloat(nomor); //parseFloat mengubah  integer menjadi float
-console.log(nomorFloat);
+nama = "luffy" == "sabo"; //persamaan dg string
+console.log(`luffy == sabo -> ${nama}`);
 
-dataString = "10.20";
-let dataNumber = parseFloat(dataString) + 20; //parseFloat mengubah data string  menjadi number
-console.log(dataNumber);
+//nilai boolean khusus false bisa juga
+console.log("nilai false akan true atau sama dengan :");
+data_bool2 = false == 0;
+console.log(`false == 0 -> ${data_bool2}`);
+
+data_bool2 = false == 0n;
+console.log(`false == 0n -> ${data_bool2}`);
+
+data_bool2 = false == " ";
+console.log(`false == " " -> ${data_bool2}`);
