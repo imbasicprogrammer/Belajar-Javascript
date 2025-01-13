@@ -1,17 +1,34 @@
-//tipe data spesial
-// NaN dan Undefined
+//belajar operasi aritmatika
+// */+-
 
-//1 NaN (not a number)
-//operasi yang menghasilkan bukan angka
-console.log(`akar dari -1 ${Math.sqrt(-1)}`);
-console.log(`"otong" / "ucup" = ${"otong" / "ucup"}`);
-console.log(`"otong" * "ucup" = ${"otong" * "ucup"}`);
-console.log(`"otong" - "ucup" = ${"otong" - "ucup"}`);
-console.log(`"otong" + "ucup" = ${"otong" + "ucup"}`);
+//expression -> a = 1, a + 1
+//statement -> a = 1 + 1
 
-//2 Undefined
-//adalah variabel atau fungsi yang tak memiliki nilai
-//contoh:
-let a;
-console.log(`a belum memiliki nilai -> ${a}`);
-console.log(console.log("test")); //console.log tak memuat nilai jadi setelah tercetak maka console.log undefined
+let angka1, angka2;
+
+angka1 = 2; // expression
+angka1 += 2; // +
+console.log(`angka1 = ${angka1}`);
+
+angka2 = angka1 + 4; // statement
+angka2 = angka2 - 2; // -
+console.log(`angka2 = ${angka2}`);
+
+angka3 = angka1 * angka2;
+console.log(`angka3 = ${angka1} * ${angka2} = ${angka3}`);
+
+//increment ++
+angka1++;
+console.log(`angka1++ = ${angka1}`);
+angka1++;
+console.log(`angka1++ = ${angka1}`);
+
+//decrement --
+angka2--;
+console.log(`angka2-- = ${angka2}`);
+angka2--;
+console.log(`angka2-- = ${angka2}`);
+
+//modulo , sisa bagi %
+angka4 = angka1 % angka2;
+console.log(`angka1 = ${angka1} % ${angka2} = ${angka4}`);
