@@ -1,28 +1,49 @@
-//Belajar bikin kalkulator
+let angka1, angka2, hasil;
 
-// dengan menggunakan valueAsNumber dan type="number"
-let angka_1, angka_2, hasil;
-/*
+//button tambah/jumlah
 document.getElementById("button_jumlah").onclick = function () {
-  angka_1 = document.getElementById("angka_1").valueAsNumber;  // valueAsNumber -> tipe data ditampilkan sebagai number
-  console.log(`angka pertama = ${angka_1} tipe = ${typeof angka_1}`);
-  angka_2 = document.getElementById("angka_2").valueAsNumber;
-  console.log(`angka kedua = ${angka_2} tipe = ${typeof angka_2}`);
-  hasil = angka_1 + angka_2;
-  console.log(`hasil penjumlahan = ${hasil}`);
+  angka1 = document.getElementById("angka_1").value;
+  console.log(`angka1 = ${angka1} tipe = ${typeof angka1}`);
+  angka2 = document.getElementById("angka_2").valueAsNumber;
+  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
+  hasil = parseFloat(angka1) + angka2;
+  console.log(`${angka1} + ${angka2} = ${hasil}`);
 
   document.getElementById("hasil").textContent = hasil;
 };
-*/
 
-//dengan menggunakan parsing -> parseFloat, parseInt
-document.getElementById("button_jumlah").onclick = function () {
-  angka_1 = document.getElementById("angka_1").value; // value -> tipe data ditampilkan sebagai string
-  console.log(`angka pertama = ${angka_1} tipe = ${typeof angka_1}`);
-  angka_2 = document.getElementById("angka_2").value;
-  console.log(`angka kedua = ${angka_2} tipe = ${typeof angka_2}`);
-  hasil = parseFloat(angka_1) + parseFloat(angka_2);
-  console.log(`hasil penjumlahan = ${hasil}`);
+//button kurang
+document.getElementById("button_kurang").onclick = function () {
+  angka1 = document.getElementById("angka_1").value;
+  console.log(`\nangka1 = ${angka1} tipe = ${typeof angka1}`);
+  angka2 = document.getElementById("angka_2").valueAsNumber;
+  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
+  hasil = parseFloat(angka1) - angka2;
+  console.log(`${angka1} - ${angka2} = ${hasil}`);
+
+  document.getElementById("hasil").textContent = hasil;
+};
+
+//button kali
+document.getElementById("button_kali").onclick = function () {
+  angka1 = document.getElementById("angka_1").value;
+  console.log(`\nangka1 = ${angka1} tipe = ${typeof angka1}`);
+  angka2 = document.getElementById("angka_2").valueAsNumber;
+  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
+  hasil = parseFloat(angka1) - angka2;
+  console.log(`${angka1} X ${angka2} = ${hasil}`);
+
+  document.getElementById("hasil").textContent = hasil;
+};
+
+//button bagi
+document.getElementById("button_bagi").onclick = function () {
+  angka1 = document.getElementById("angka_1").value;
+  console.log(`\nangka1 = ${angka1} tipe = ${typeof angka1}`);
+  angka2 = document.getElementById("angka_2").valueAsNumber;
+  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
+  hasil = parseFloat(angka1) / angka2;
+  console.log(`${angka1} / ${angka2} = ${hasil}`);
 
   document.getElementById("hasil").textContent = hasil;
 };
