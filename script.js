@@ -1,13 +1,28 @@
-//latihan string
+//Belajar bikin kalkulator
 
-let namaDepan, namaBelakang, namaLengkap;
+// dengan menggunakan valueAsNumber dan type="number"
+let angka_1, angka_2, hasil;
+/*
+document.getElementById("button_jumlah").onclick = function () {
+  angka_1 = document.getElementById("angka_1").valueAsNumber;  // valueAsNumber -> tipe data ditampilkan sebagai number
+  console.log(`angka pertama = ${angka_1} tipe = ${typeof angka_1}`);
+  angka_2 = document.getElementById("angka_2").valueAsNumber;
+  console.log(`angka kedua = ${angka_2} tipe = ${typeof angka_2}`);
+  hasil = angka_1 + angka_2;
+  console.log(`hasil penjumlahan = ${hasil}`);
 
-document.getElementById("button_merge").onclick = function () {
-  //.onclick -> event ketika tombol di klik
-  namaDepan = document.getElementById("nama_depan").value; //.value -> inputan dari html
-  namaBelakang = document.getElementById("nama_belakang").value;
-  namaLengkap = `${namaDepan} ${namaBelakang}`;
-  console.log(namaLengkap);
+  document.getElementById("hasil").textContent = hasil;
+};
+*/
 
-  document.getElementById("nama_lengkap").textContent = namaLengkap; //menampilkan namaLengkap ke html dengan .textcontent
+//dengan menggunakan parsing -> parseFloat, parseInt
+document.getElementById("button_jumlah").onclick = function () {
+  angka_1 = document.getElementById("angka_1").value; // value -> tipe data ditampilkan sebagai string
+  console.log(`angka pertama = ${angka_1} tipe = ${typeof angka_1}`);
+  angka_2 = document.getElementById("angka_2").value;
+  console.log(`angka kedua = ${angka_2} tipe = ${typeof angka_2}`);
+  hasil = parseFloat(angka_1) + parseFloat(angka_2);
+  console.log(`hasil penjumlahan = ${hasil}`);
+
+  document.getElementById("hasil").textContent = hasil;
 };
