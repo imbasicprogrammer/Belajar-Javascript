@@ -1,34 +1,22 @@
-//belajar operasi aritmatika
-// */+-
+//belajar Operator logika
 
-//expression -> a = 1, a + 1
-//statement -> a = 1 + 1
+//or, not, and
 
-let angka1, angka2;
+let dataBool = true;
+console.log(`dataBool = ${dataBool}`);
+//1. Not (!) -> membalikan nilai
 
-angka1 = 2; // expression
-angka1 += 2; // +
-console.log(`angka1 = ${angka1}`);
+console.log(`!dataBool = ${!dataBool}`);
+//selain true dan false, bisa juga dengan 0(false) dan 1 - bil bulat > 0(true)
 
-angka2 = angka1 + 4; // statement
-angka2 = angka2 - 2; // -
-console.log(`angka2 = ${angka2}`);
+//2.Or (||)
+console.log(`True || True = ${true || true}`);
+console.log(`True || false = ${true || false}`);
+console.log(`false || True = ${false || true}`);
+console.log(`false || false = ${false || false}`);
 
-angka3 = angka1 * angka2;
-console.log(`angka3 = ${angka1} * ${angka2} = ${angka3}`);
-
-//increment ++
-angka1++;
-console.log(`angka1++ = ${angka1}`);
-angka1++;
-console.log(`angka1++ = ${angka1}`);
-
-//decrement --
-angka2--;
-console.log(`angka2-- = ${angka2}`);
-angka2--;
-console.log(`angka2-- = ${angka2}`);
-
-//modulo , sisa bagi %
-angka4 = angka1 % angka2;
-console.log(`angka1 = ${angka1} % ${angka2} = ${angka4}`);
+//3 And (&&)
+console.log(`True && True = ${true && true}`);
+console.log(`True && false = ${true && false}`);
+console.log(`false && True = ${false && true}`);
+console.log(`false && false = ${false && false}`);
