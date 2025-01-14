@@ -1,49 +1,25 @@
-let angka1, angka2, hasil;
+// Latihan Operator
 
-//button tambah/jumlah
-document.getElementById("button_jumlah").onclick = function () {
-  angka1 = document.getElementById("angka_1").value;
-  console.log(`angka1 = ${angka1} tipe = ${typeof angka1}`);
-  angka2 = document.getElementById("angka_2").valueAsNumber;
-  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
-  hasil = parseFloat(angka1) + angka2;
-  console.log(`${angka1} + ${angka2} = ${hasil}`);
+let aritmatikaAngka1, operatorAritmatika, aritmatikaAngka2, hasilAritmatika;
 
-  document.getElementById("hasil").textContent = hasil;
+document.getElementById("buttonAritmatika").onclick = function () {
+  aritmatikaAngka1 = document.getElementById("aritmatikaAngka1").value;
+  aritmatikaAngka2 = document.getElementById("aritmatikaAngka2").valueAsNumber;
+  operatorAritmatika = document.getElementById("operatorAritmatika").value;
+
+  hasilAritmatika = eval(`${parseFloat(aritmatikaAngka1)} ${operatorAritmatika} ${aritmatikaAngka2}`); //eval -> menghitung string di dalamnya
+  console.log(`${aritmatikaAngka1} ${operatorAritmatika} ${aritmatikaAngka2} = ${hasilAritmatika}`);
+  document.getElementById("hasilAritmatika").textContent = hasilAritmatika;
 };
 
-//button kurang
-document.getElementById("button_kurang").onclick = function () {
-  angka1 = document.getElementById("angka_1").value;
-  console.log(`\nangka1 = ${angka1} tipe = ${typeof angka1}`);
-  angka2 = document.getElementById("angka_2").valueAsNumber;
-  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
-  hasil = parseFloat(angka1) - angka2;
-  console.log(`${angka1} - ${angka2} = ${hasil}`);
+let Bool1, operatorLogika, Bool2, hasilLogika;
 
-  document.getElementById("hasil").textContent = hasil;
-};
+document.getElementById("buttonLogika").onclick = function () {
+  Bool1 = document.getElementById("Bool1").value;
+  Bool2 = document.getElementById("Bool2").valueAsNumber;
+  operatorLogika = document.getElementById("operatorLogika").value;
 
-//button kali
-document.getElementById("button_kali").onclick = function () {
-  angka1 = document.getElementById("angka_1").value;
-  console.log(`\nangka1 = ${angka1} tipe = ${typeof angka1}`);
-  angka2 = document.getElementById("angka_2").valueAsNumber;
-  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
-  hasil = parseFloat(angka1) - angka2;
-  console.log(`${angka1} X ${angka2} = ${hasil}`);
-
-  document.getElementById("hasil").textContent = hasil;
-};
-
-//button bagi
-document.getElementById("button_bagi").onclick = function () {
-  angka1 = document.getElementById("angka_1").value;
-  console.log(`\nangka1 = ${angka1} tipe = ${typeof angka1}`);
-  angka2 = document.getElementById("angka_2").valueAsNumber;
-  console.log(`angka2 = ${angka2} tipe = ${typeof angka2}`);
-  hasil = parseFloat(angka1) / angka2;
-  console.log(`${angka1} / ${angka2} = ${hasil}`);
-
-  document.getElementById("hasil").textContent = hasil;
+  hasilLogika = eval(`${Bool1} ${operatorLogika} ${Bool2}`); //eval -> menghitung string di dalamnya
+  console.log(`${Bool1} ${operatorLogika} ${Bool2} = ${hasilLogika}`);
+  document.getElementById("hasilLogika").textContent = hasilLogika;
 };
