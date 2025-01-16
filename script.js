@@ -1,23 +1,10 @@
-//Belajar Popup Box javascript
-//alert, prompt, confirm
+//belajar perulangan while
 
-//alert -> menampilkan pop up pesan
-alert("halo, siapa namamu ?");
-
-//prompt -> menampilkan pop up yang bisa di isi
-// let nama = prompt("masukan nama : ");
-
-//confirm -> menampilkan pop up dan menghasilkan nilai true atau false
-// let verifikasi = confirm(`apakah nama mu ${nama} ?`);
-let verifikasi = true;
-while (verifikasi === true) {
-  let nama = prompt("masukan nama : ");
-  alert("halo " + nama);
-  verifikasi = confirm(`coba lagi ?`);
+//1. while
+angka = 1;
+while (angka <= 10) {
+  console.log(`angka ${angka}`);
+  angka++;
 }
 
-/*
-if (verifikasi == true) {
-  alert(`yahallo~~ ${nama}`);
-}
-*/
+console.log("program selesai");
