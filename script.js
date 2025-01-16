@@ -1,23 +1,8 @@
-//Belajar Popup Box javascript
-//alert, prompt, confirm
+//1. juragan angkot memiliki sepuluh angkot dalam kondisi bagus, buatkan loop untuk menomori tiap angkot
 
-//alert -> menampilkan pop up pesan
-alert("halo, siapa namamu ?");
+angkot = 1;
 
-//prompt -> menampilkan pop up yang bisa di isi
-// let nama = prompt("masukan nama : ");
-
-//confirm -> menampilkan pop up dan menghasilkan nilai true atau false
-// let verifikasi = confirm(`apakah nama mu ${nama} ?`);
-let verifikasi = true;
-while (verifikasi === true) {
-  let nama = prompt("masukan nama : ");
-  alert("halo " + nama);
-  verifikasi = confirm(`coba lagi ?`);
+while (angkot <= 10) {
+  console.log(`angkot ${angkot} dalam kondisi baik`);
+  angkot++;
 }
-
-/*
-if (verifikasi == true) {
-  alert(`yahallo~~ ${nama}`);
-}
-*/
