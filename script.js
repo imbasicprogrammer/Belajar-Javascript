@@ -1,37 +1,52 @@
-//A. membuat game suit sumatera barat
+//game tebak angka
+
+//input tebakan user
 let main = true;
 while (main == true) {
-  //mengambil input user
-  let user = prompt("silahkan pilih : gajah, semut, orang");
+  let user = parseInt(prompt("anda memiliki 3 kesempatan \npilih angka dari 1-10 : "));
 
-  //mengambil input computer dengan fungsi random
-  let compt = Math.random();
-
-  if (compt < 0.34) {
-    compt = "gajah";
-  } else if (compt > 0.34 && compt < 0.78) {
-    compt = "orang";
+  //code menentukan nilai angka dengan fungsi random
+  let angka = Math.random();
+  if (angka < 0.19) {
+    angka = 1;
+  } else if (angka > 0.19 && angka < 0.29) {
+    angka = 2;
+  } else if (angka > 0.29 && angka < 0.39) {
+    angka = 3;
+  } else if (angka > 0.39 && angka < 0.49) {
+    angka = 4;
+  } else if (angka > 0.49 && angka < 0.59) {
+    angka = 5;
+  } else if (angka > 0.59 && angka < 0.69) {
+    angka = 6;
+  } else if (angka > 0.69 && angka < 0.79) {
+    angka = 7;
+  } else if (angka > 0.79 && angka < 0.89) {
+    angka = 8;
+  } else if (angka > 0.89 && angka < 0.91) {
+    angka = 9;
   } else {
-    compt = "semut";
+    angka = 10;
   }
 
-  hasil = "";
-  if (user == compt) {
-    hasil = "Seri";
-  } else if (user == "gajah") {
-    hasil = compt == "orang" ? "Anda menang" : "anda kalah"; //pakai ternary
-  } else if (user == "orang") {
-    hasil = compt == "semut" ? "anda menang" : "anda kalah";
-  } else if (user == "semut") {
-    hasil = compt == "gajah" ? "anda menang" : "anda kalah";
-  } else {
-    hasil = "pilihan anda salah";
+  //program untuk mengatur jumlah kesempatan
+  let hasil = "";
+  for (let i = 3; i >= 1; i--) {
+    if (user == angka) {
+      hasil = "tebakan anda benar yaitu : " + angka;
+      alert(hasil);
+      break;
+    } else if (user < angka) {
+      hasil = "nilai yang anda masukan lebih kecil";
+      alert(hasil);
+      user = parseInt(prompt("anda memiliki " + i + " kesempatan \npilih angka dari 1-10 : "));
+    } else {
+      hasil = "nilai yang anda masukan lebih besar";
+      alert(hasil);
+      user = parseInt(prompt("anda memiliki " + i + " kesempatan \npilih angka dari 1-10 : "));
+    }
   }
 
-  alert(`kamu : ${user}\ncomputer : ${compt}\nhasil = ${hasil}`);
-  console.log(`compt = ${compt} vs user = ${user} --> ${hasil}`);
-  main = confirm("mau lanjut main ?");
+  console.log(`tebakan user = ${user} \nangka yang benar = ${angka}`);
+  main = confirm("mau main lagi ?");
 }
-
-alert("terima kasih sudah bermain");
-console.log("game selesai");
