@@ -1,52 +1,36 @@
-//game tebak angka
+//Belajar Function
+/*
+//1. Fungsi sederhana menjumlahkan dua buah volume kubus
+let kubusA, kubusB;
 
-//input tebakan user
-let main = true;
-while (main == true) {
-  let user = parseInt(prompt("anda memiliki 3 kesempatan \npilih angka dari 1-10 : "));
+kubusA = parseInt(prompt("masukan nilai kubub a : "));
+kubusB = parseInt(prompt("masukan nilai kubus b : "));
 
-  //code menentukan nilai angka dengan fungsi random
-  let angka = Math.random();
-  if (angka < 0.19) {
-    angka = 1;
-  } else if (angka > 0.19 && angka < 0.29) {
-    angka = 2;
-  } else if (angka > 0.29 && angka < 0.39) {
-    angka = 3;
-  } else if (angka > 0.39 && angka < 0.49) {
-    angka = 4;
-  } else if (angka > 0.49 && angka < 0.59) {
-    angka = 5;
-  } else if (angka > 0.59 && angka < 0.69) {
-    angka = 6;
-  } else if (angka > 0.69 && angka < 0.79) {
-    angka = 7;
-  } else if (angka > 0.79 && angka < 0.89) {
-    angka = 8;
-  } else if (angka > 0.89 && angka < 0.91) {
-    angka = 9;
-  } else {
-    angka = 10;
-  }
-
-  //program untuk mengatur jumlah kesempatan
-  let hasil = "";
-  for (let i = 3; i >= 1; i--) {
-    if (user == angka) {
-      hasil = "tebakan anda benar yaitu : " + angka;
-      alert(hasil);
-      break;
-    } else if (user < angka) {
-      hasil = "nilai yang anda masukan lebih kecil";
-      alert(hasil);
-      user = parseInt(prompt("anda memiliki " + i + " kesempatan \npilih angka dari 1-10 : "));
-    } else {
-      hasil = "nilai yang anda masukan lebih besar";
-      alert(hasil);
-      user = parseInt(prompt("anda memiliki " + i + " kesempatan \npilih angka dari 1-10 : "));
-    }
-  }
-
-  console.log(`tebakan user = ${user} \nangka yang benar = ${angka}`);
-  main = confirm("mau main lagi ?");
+function MenghitungVolumeKubus(a, b) {
+  let rumus1, rumus2, hasil;
+  rumus1 = a ** 3;
+  rumus2 = b ** 3;
+  hasil = rumus1 + rumus2;
+  return hasil;
 }
+
+alert("hasilnya adalah = " + MenghitungVolumeKubus(kubusA, kubusB));
+console.log(`hasil dari penjumlahan volume kubus A dan volume kubus B adalah = ${MenghitungVolumeKubus(kubusA, kubusB)}`);
+*/
+
+//2. Pseudo Variabel Arguments -> tipe data array
+// arguments = [1,2,3,"a",true] -> masing masing nilai ditempatkan dalam sebuah indeks dari 0
+//arguments dapat digunakan untuk membuat function jadi lebih fleksibel, contoh :
+
+function tambah() {
+  //memakai perulangan
+  let hasil = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    hasil += arguments[i];
+    //-> ini akan menambah hasil dengan nilai di setiap indeks arguments secara berulang sebanyak panjang argument
+  }
+
+  return hasil;
+}
+
+console.log(`penjumlahan dengan function tambah = ${tambah(2, 3, 6)}`);
