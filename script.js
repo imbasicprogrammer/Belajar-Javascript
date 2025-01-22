@@ -1,36 +1,31 @@
-//Belajar Function
+//Belajar rekursif -> fungsi yang memanggil dirinya sendiri
+
+//fungsi rekursif fibonaci
 /*
-//1. Fungsi sederhana menjumlahkan dua buah volume kubus
-let kubusA, kubusB;
-
-kubusA = parseInt(prompt("masukan nilai kubub a : "));
-kubusB = parseInt(prompt("masukan nilai kubus b : "));
-
-function MenghitungVolumeKubus(a, b) {
-  let rumus1, rumus2, hasil;
-  rumus1 = a ** 3;
-  rumus2 = b ** 3;
-  hasil = rumus1 + rumus2;
-  return hasil;
+function fibonacci(n) {
+  if (n <= 1) {
+    return n; // Basis: jika n = 0 atau n = 1
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2); // Rekursi
 }
 
-alert("hasilnya adalah = " + MenghitungVolumeKubus(kubusA, kubusB));
-console.log(`hasil dari penjumlahan volume kubus A dan volume kubus B adalah = ${MenghitungVolumeKubus(kubusA, kubusB)}`);
+// Contoh penggunaan
+let n = parseInt(prompt("masukan nilai batas : ")); // Menampilkan 10 bilangan Fibonacci pertama
+for (let i = 0; i < n; i++) {
+  console.log(fibonacci(i));
+}
 */
 
-//2. Pseudo Variabel Arguments -> tipe data array
-// arguments = [1,2,3,"a",true] -> masing masing nilai ditempatkan dalam sebuah indeks dari 0
-//arguments dapat digunakan untuk membuat function jadi lebih fleksibel, contoh :
-
-function tambah() {
-  //memakai perulangan
-  let hasil = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    hasil += arguments[i];
-    //-> ini akan menambah hasil dengan nilai di setiap indeks arguments secara berulang sebanyak panjang argument
+//fungsi rekursif faktorial
+function faktorial(a) {
+  if (a === 0) {
+    return 1;
   }
 
-  return hasil;
+  return faktorial(a - 1) * a;
 }
 
-console.log(`penjumlahan dengan function tambah = ${tambah(2, 3, 6)}`);
+let a = parseInt(prompt("masukan nilai : "));
+for (i = 0; i <= a; i++) {
+  console.log(`faktorial dari ${i} = ${faktorial(i)}`);
+}
