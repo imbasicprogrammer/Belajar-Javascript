@@ -85,3 +85,54 @@ console.log(array1.join(" - "));
 let arr2 = array1.slice(1, 3);
 console.log("==========slice===========");
 console.log(arr2.join(" - "));
+
+//5. method forEach dan map
+//forEach -> adalah method yang memiliki fungsi yang hampir mirip dengan for
+let angka2 = [1, 2, 4, 5, 6, 8, 7, 3, 9];
+console.log("==========forEach===========");
+angka2.forEach(function (e) {
+  console.log(e);
+});
+
+//map -> hampir mirip dengan forEach tapi bisa memakai return
+console.log("==========map===========");
+let angka3 = angka2.map(function (e) {
+  return e * 2; //nilai dari array angka2 dikali 2
+});
+
+console.log(angka3.join(" "));
+
+//6.sort
+//adalah method yang digunakan untuk mengurutkan nilai pada array
+console.log("==========sort===========");
+angka2.sort();
+console.log(angka2.join(" "));
+
+//note : nilai diurutkan berdasarkan karakter awal
+//jadi jika ada puluhan maka nilai puluhan bisa berada di depan. contoh :
+let angka4 = [2, 3, 4, 5, 6, 1, 9, 5, 6, 7, 10, 20];
+console.log("==========sort dengan puluhan===========");
+angka4.sort();
+console.log(angka4.join(" "));
+
+//cara memperbaikinya :
+angka4.sort(function (a, b) {
+  return a - b;
+});
+console.log("==========sort dengan puluhan yang sudah diperbaiki===========");
+console.log(angka4.join(" "));
+
+//7. filter & find
+//filter -> untuk mencari nilai pada suatu array dan menampilkan nya dalam bentuk array
+let angkaFilter = angka4.filter(function (x) {
+  return x > 5; // fungsi akan mengembalikan nilai array yang lebih besar dari 5
+});
+console.log("==========filter===========");
+console.log(angkaFilter.join(" "));
+
+//find -> untuk mencari nilai pada suatu array dan menampilkannya hanya satu nilai saja
+angkaFind = angka4.find(function (x) {
+  return x > 5; //fungsi akan mengembalikan nilai yang besar dari lima yg pertama kali ditemukan
+});
+console.log("==========find===========");
+console.log(angkaFind);
