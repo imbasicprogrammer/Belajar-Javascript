@@ -1,15 +1,39 @@
-//3. angkot 7 - 10 sedang tak beroperasi menggunakan if
+// latihan penumpang angkot
+let penumpang = [];
 
-let jmlAngkot = 10;
-let angkotBeroperasi = 6;
-let noAngkot = 1;
-
-for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
-  if (noAngkot <= angkotBeroperasi && noAngkot !== 5) {
-    console.log(`angkot no ${noAngkot} bisa beropasi`);
-  } else if (noAngkot === 8 || noAngkot === 10 || noAngkot == 5) {
-    console.log(`angkot no ${noAngkot} sedang lembur`);
+function tambahPenumpang(namaPenumpang, penumpang) {
+  if (penumpang.length == 0) {
+    penumpang.push(namaPenumpang);
+    return penumpang;
   } else {
-    console.log(`angkot no ${noAngkot} tidak bisa beroperasi`);
+    for (let i = 0; i < penumpang.length; i++) {
+      if (penumpang[i] == undefined) {
+        penumpang[i] = namaPenumpang;
+        return penumpang;
+      } else if (penumpang[i] == namaPenumpang) {
+        console.log(`nama ${namaPenumpang} sudah naik`);
+        return penumpang;
+      } else if (i == penumpang.length - 1) {
+        penumpang.push(namaPenumpang);
+        return penumpang;
+      }
+    }
+  }
+}
+
+function hapusPenumpang(namaPenumpang, penumpang) {
+  if (penumpang.length == 0) {
+    console.log("angkot sedang kosong");
+    return penumpang;
+  } else {
+    for (let i = 0; i < penumpang.length; i++) {
+      if (penumpang[i] == namaPenumpang) {
+        penumpang[i] = undefined;
+        return penumpang;
+      } else if (i == penumpang.length - 1) {
+        console.log(`nama ${namaPenumpang} tidak ada di angkot`);
+        return penumpang;
+      }
+    }
   }
 }
