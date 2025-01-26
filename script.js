@@ -1,21 +1,33 @@
-//Belajar Object
-//object adalah tipe data pada javascript yang sama seperti array namun lebih powerful
-//object bekerja dengan menyimpan nilai data yang berbeda-beda dalam suatu properti yang memiliki nama
-// berbeda dengan array yang menyimpan nilai dalam indeks
+//belajar Membuat Object
+//ada 4 cara membuat object :
 
-//contoh kerangka object, dengan cara Object literal
+//1. object literal -> penulisan object paling umum
 var namaObject = {
-  nama: "muhammad habib", //properti dengan nama, nama yang menyimpan string
-  usia: 18, //properti dengan nama usia yang menyimpan integer
-  ips: [3.4, 3.5, 3.6, 3.7], //properti dengan nama usia yang menyimpan ip persemester
-  ipKumulatif: function () {
-    var total = 0;
-    var ipSemester = this.ips;
-    for (var i = 0; i < ipSemester.length; i++) {
-      total += ipSemester[i];
-    }
-    return total / ipSemester.length;
-  }, // properti bernama ipKumulatif yang menyimpan function menghitung ipk
+  nama: "hatake kakashi",
+  usia: 24,
+  kampus: "universitas andalas",
 };
+console.log(namaObject); //pemanggilan object literal
 
-console.log("IPK Kumulatif:", namaObject.ipKumulatif()); // memanggil properti ipKumulatif
+//2. function declaration -> penulisan object dengan memanfaatkan deklarasi function
+function objectMhs(nama, usia, kampus) {
+  var mhs = {};
+  mhs.nama = nama;
+  mhs.usia = usia;
+  mhs.kampus = kampus;
+  return mhs;
+}
+var mhs1 = objectMhs("danzo", 45, "konoha"); //pemanggilan dengan function declaration
+
+//3. constructor -> hampir mirip dengan function declaration, bedanya kita tak perlu mendeklarasikan var untuk object
+// karena sudah langsung dibuatkan oleh javascript dengan nama var this
+
+function Mahasiswa(nama, usia, kampus) {
+  //nama function pada construct biasanya sederhana dan diawali kapital -> Mahasiswa
+  this.nama = nama;
+  this.usia = usia;
+  this.kampus = kampus;
+}
+
+var mhs3 = new mhs2("sarutobi", 56, "brawijaya"); //pemanggilan object dengan constructor
+//jika memakai constructor maka tiap memanggil kita harus memakai keyword new
